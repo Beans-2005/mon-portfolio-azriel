@@ -1,0 +1,142 @@
+/* Réinitialisation de base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Corps du document */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f7f9fb; /* Fond clair */
+  color: #333; /* Texte foncé */
+}
+
+/* Conteneur principal : sidebar + contenu */
+.container {
+  display: flex;
+  min-height: 100vh; /* Hauteur minimum = hauteur de l’écran */
+  flex-direction: row; /* Affichage côte à côte par défaut */
+}
+
+/* Barre latérale */
+.sidebar {
+  background: #282c34; /* Couleur sombre */
+  color: #fff;
+  width: 280px;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Image de profil */
+.sidebar .photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%; /* Cercle */
+  border: 3px solid #fff;
+  margin-bottom: 20px;
+  object-fit: cover; /* Ajuste sans déformation */
+}
+
+/* Nom */
+.sidebar h1 {
+  font-size: 1.5em;
+  margin-bottom: 5px;
+}
+
+/* Slogan */
+.sidebar .tagline {
+  font-size: 0.9em;
+  color: #bbb;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* Liens de navigation */
+.sidebar nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 8px 0;
+  font-weight: bold;
+  display: block;
+  transition: color 0.3s;
+}
+
+.sidebar nav a:hover {
+  color: #61dafb; /* Bleu clair au survol */
+}
+
+/* Contenu principal */
+.content {
+  flex: 1;
+  padding: 40px;
+}
+
+/* Sections */
+section {
+  margin-bottom: 40px;
+}
+
+/* Titres des sections */
+h2 {
+  border-left: 4px solid #61dafb;
+  padding-left: 10px;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+/* Boîte de projet */
+.project {
+  background: #fff;
+  padding: 20px;
+  border-left: 5px solid #282c34;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* Ombre légère */
+  border-radius: 6px;
+}
+
+/* Liste des compétences */
+ul {
+  list-style: square;
+  margin-left: 20px;
+}
+
+/* Liens classiques */
+a {
+  color: #0077cc;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* RESPONSIVE pour écran < 768px (tablettes / téléphones) */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Affichage vertical */
+  }
+
+  .sidebar {
+    width: 100%;
+    flex-direction: row; /* Sidebar horizontale */
+    justify-content: space-around;
+    padding: 20px 10px;
+    text-align: center;
+    flex-wrap: wrap;
+  }
+
+  .sidebar nav a {
+    margin: 5px 10px;
+  }
+
+  .sidebar .photo {
+    width: 80px;
+    height: 80px;
+  }
+
+  .content {
+    padding: 20px;
+  }
+}
